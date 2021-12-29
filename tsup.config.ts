@@ -8,5 +8,6 @@ export default defineConfig({
     clean: true,
     dts: true,
     format: ['cjs', 'esm'],
+    noExternal: ['tree-crawl'],
     legacyOutput: true,
 })
