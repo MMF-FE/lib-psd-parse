@@ -3,10 +3,11 @@
  * Enhanced and multifunctional tree walker
  * @author imcuttle
  */
-import crawl from 'tree-crawl'
+// import * as crawl from 'tree-crawl'
 import get from 'lodash.get'
 import set from 'lodash.set'
 import unset from 'lodash.unset'
+const crawl = require('tree-crawl')
 
 function toArray(data: any) {
     if (!Array.isArray(data)) {
