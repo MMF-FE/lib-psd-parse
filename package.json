@@ -1,0 +1,46 @@
+{
+    "name": "@yzfe/lib-psd-parse",
+    "version": "0.0.0",
+    "description": "PSD 解释",
+    "main": "./dist/index.js",
+    "module": "./dist/esm/index.js",
+    "types": "./dist/index.d.ts",
+    "author": "vfasky<vfasky@me.com>",
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org"
+    },
+    "files": [
+        "dist",
+        "package.json",
+        "README.md"
+    ],
+    "scripts": {
+        "dev": "npm run build -- --watch",
+        "build": "tsup",
+        "cpHome": "cp ./README.md ./docs/README.md",
+        "docs": "npm run cpHome && vuepress dev docs",
+        "docs:build": "npm run cpHome && NODE_ENV=production vuepress build docs",
+        "test": "ts-node test"
+    },
+    "dependencies": {
+        "color": "^4.1.0",
+        "lodash.get": "^4.4.2",
+        "lodash.set": "^4.3.2",
+        "lodash.unset": "^4.5.2",
+        "tree-crawl": "^1.1.0",
+        "tslib": "^2.3.1"
+    },
+    "devDependencies": {
+        "@types/color": "^3.0.2",
+        "@types/node": "^14.14.31",
+        "@types/node-fetch": "^3.0.3",
+        "@yzfe-private/upqn": "^0.0.3",
+        "node-fetch": "2",
+        "ts-node": "^9.1.1",
+        "tsup": "^5.11.7",
+        "typescript": "^4.2.2",
+        "vuepress": "^1.8.2"
+    }
+}
